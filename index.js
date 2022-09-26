@@ -17,6 +17,8 @@ $(document).ready(function(){
             console.log(scrT);
             if(scrT > 300) {
                 $(".only_m").css("display", "block");
+            } else {
+                $(".only_m").css("display", "none");
             }
         })
     }

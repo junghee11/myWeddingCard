@@ -147,9 +147,9 @@ a {
 }
 
 .ww_container .text_center img {
-    width: auto;
+    width: inherit;
     max-width:520px; 
-    object-fit: contain;
+    /* object-fit: contain; */
 }
 
 .ww_section {
@@ -195,6 +195,10 @@ a {
 
 .main_text {
     width: 300px;
+}
+
+.how_to_come {
+    width:800px;
 }
 
 .footer {
@@ -292,5 +296,26 @@ a {
     } */
     .ww_container .text_center {
         flex-wrap: wrap;
+    }
+
+    #events .content {
+        flex-direction: column;
+    }
+    
+    #events .content p {
+        width : 100%;
+        padding : 0;
+    }
+    
+    #events .content img {
+        width : 100%;
+        padding : 0;
+    }
+    .how_to_come {
+        width:-webkit-fill-available;
+        margin: 0;
+    }
+    .contact_row {
+        margin :70px 20px;
     }
 }
