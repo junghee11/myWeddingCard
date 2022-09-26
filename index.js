@@ -14,7 +14,6 @@ $(document).ready(function(){
     if(window.innerWidth < 1100) {
         $(window).scroll(function(){
             let scrT = $(window).scrollTop();
-            console.log(scrT);
             if(scrT > 300) {
                 $(".only_m").css("display", "block");
             } else {
@@ -34,3 +33,7 @@ $(document).ready(function(){
         $(".popup").css("display", "none");
     })
 })
+
+function clipboard_copy(str) {
+    window.navigator.clipboard.writeText(str);
+}

@@ -147,7 +147,7 @@ a {
 }
 
 .ww_container .text_center img {
-    width: inherit;
+    /* width: inherit; */
     max-width:520px; 
     /* object-fit: contain; */
 }
