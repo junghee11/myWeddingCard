@@ -277,9 +277,6 @@ a {
     .only_pc {
         display: none;
     }
-    .only_m {
-        display: block;
-    }
     .preview.first {
         background: url('img/main.jpg') 0% 0% / contain no-repeat rgba(0, 0, 0, 0);
     }

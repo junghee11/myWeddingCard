@@ -11,6 +11,16 @@ $(document).ready(function(){
         })
     })
     
+    if(window.innerWidth < 1100) {
+        $(window).scroll(function(){
+            let scrT = $(window).scrollTop();
+            console.log(scrT);
+            if(scrT > 300) {
+                $(".only_m").css("display", "block");
+            }
+        })
+    }
+
     $(".contact_button").on("click", function(){
         $(".dim").css("display", "block");
         let popup_type = $(this).data("type");
