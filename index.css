@@ -147,8 +147,9 @@ a {
 }
 
 .ww_container .text_center img {
+    width: auto;
     max-width:520px; 
-    /* object-fit: contain; */
+    object-fit: contain;
 }
 
 .ww_section {
@@ -281,7 +282,7 @@ a {
         background: url('img/main.jpg') 0% 0% / contain no-repeat rgba(0, 0, 0, 0);
     }
     .preview.first, .main_container {
-        width: fit-content;
+        /* width: fit-content; */
     }
     /* .gallery_page {
         background: url('img/gallery1.jpg') 50% 0% / auto no-repeat fixed rgba(0, 0, 0, 0); height: 600px;
