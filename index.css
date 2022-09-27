@@ -52,7 +52,7 @@ a {
 }
 
 .nav_page a {
-    color : #999999;
+    color : #4e4e4e;
     font-size : 14px;
 }
 
@@ -209,7 +209,7 @@ a {
     width: 300px;
 }
 
-.how_to_come {
+.map_group img#how_to_come {
     width:800px;
 }
 
@@ -357,7 +357,7 @@ a {
         width : 100%;
         padding : 0;
     }
-    .how_to_come {
+    .map_group img#how_to_come {
         width:-webkit-fill-available;
         margin: 0;
     }
