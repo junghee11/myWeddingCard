@@ -291,6 +291,24 @@ a {
     height: 100%;
 }
 
+.fixed_icon {
+    position: fixed;
+    bottom: 20px;
+    filter : opacity(0.5);
+}
+
+.fixed_icon img {
+    width: 50px;
+}
+
+.music_button {
+    left : 20px;
+}
+
+.top_button {
+    right : 20px;
+}
+
 @media screen and (max-width: 1100px) {
     .only_pc {
         display: none;
@@ -314,13 +332,13 @@ a {
     .gallery_page {
         background: url('img/gallery1.jpg') 50% 0% / contain no-repeat rgba(0, 0, 0, 0);
         background-size: 600px;
-        height: 400px;
+        height: 250px;
     }
     .map_page {
         background: url('img/map.jpg') 50% 0% / contain no-repeat rgba(0, 0, 0, 0);
         /* background: url('img/map.jpg') 50% 0% / auto no-repeat fixed rgba(0, 0, 0, 0); height: 600px; */
         background-size: 600px;
-        height: 400px;
+        height: 250px;
     }
     .ww_container .text_center {
         flex-wrap: wrap;

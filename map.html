@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script language="javascript" type="text/javascript" src="index.js?ver=1.01"></script>
     <link rel="stylesheet" href="./index.css">
     <title>김경한♥남정희</title>
 </head>
@@ -33,7 +35,7 @@
     <div id="map">
         <div class="container section">
             <div>
-                <h2 class="ww-title"><img src="img/main_text5.png" class="main_text" alt="오시는길"></h2>
+                <h2><img src="img/main_text5.png" class="main_text" alt="오시는길"></h2>
                 <div>
                     <h4>대구광역시 북구 유통단지로14길 22 일반의류관 4F</h4>
                     <h5 style="color: gray;">(구) 대구광역시 북구 산격동 1668번지 NC아울렛</h5>
@@ -69,6 +71,15 @@
             <p><span style="color:#808080;">COPYRIGHT (C) NAM JUNGHEE. All Rights reserved</span></p>
         </div>
     </div>
+</div>
+<div class="fixed_icon music_button">
+    <i style="width:50px; height: 50px; position: absolute;display: block;" onclick="document.getElementById('play_music').play()"></i>
+    <img src="img/icon_music.png" alt="">
+    <audio src="img/music.mp3" id="play_music">
+    </audio>
+</div>
+<div class="fixed_icon top_button">
+    <img src="img/top.png" alt="">
 </div>
 </body>
 </html>

@@ -32,6 +32,11 @@ $(document).ready(function(){
         $(".dim").css("display", "none");
         $(".popup").css("display", "none");
     })
+
+    $(".top_button").on("click", function(){
+        $( 'html, body' ).animate( { scrollTop : 0 }, 400 );
+	    return false;
+    })
 })
 
 function clipboard_copy(str) {

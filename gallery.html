@@ -4,12 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script language="javascript" type="text/javascript" src="index.js?ver=1.01"></script>
     <link rel="stylesheet" href="./index.css">
     <title>김경한♥남정희</title>
 </head>
 <body>
     <div class="preview gallery_page">
-        <div class="header only_pc">
+        <div class="header only_pc section">
             <div style="width:55%">
                 <img src="img/logo.png" alt="" onclick="location.href='./index.html'">
             </div>
@@ -31,7 +33,7 @@
     </div>
     <div class="main_container">
         <div class="container section">
-            <div style="margin: 50px auto;"><img src="img/main_text6.png" alt=""></div>
+            <div style="margin: 50px auto;"><img class="main_text" src="img/main_text6.png" alt=""></div>
             <div class="ww_gallery">
                 <a data-gallery="ww-gallery" data-toggle="lightbox">
                     <img alt="Gallery Pic 2" src="img/BAE01901.jpg">
@@ -86,6 +88,15 @@
                 <p><span style="color:#808080;">COPYRIGHT (C) NAM JUNGHEE. All Rights reserved</span></p>
             </div>
         </div>
+    </div>
+    <div class="fixed_icon music_button">
+        <i style="width:50px; height: 50px; position: absolute;display: block;" onclick="document.getElementById('play_music').play()"></i>
+        <img src="img/icon_music.png" alt="">
+        <audio src="img/music.mp3" id="play_music">
+        </audio>
+    </div>
+    <div class="fixed_icon top_button">
+        <img src="img/top.png" alt="">
     </div>
 </body>
 </html>
