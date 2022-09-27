@@ -69,6 +69,7 @@ a {
 .only_m .nav_page {
     width: 100%;
     height: 60px;
+    box-shadow : 3px 3px 14px 1px #f3f2f2;
 }
 
 .only_m .nav_page li {
@@ -77,6 +78,7 @@ a {
 
 .only_m .nav_page li a {
     font-size: 16px;
+    font-weight: 700;
 }
 
 .preview.first {

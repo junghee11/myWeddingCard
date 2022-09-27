@@ -34,6 +34,10 @@ $(document).ready(function(){
         }
     })
 
+    setTimeout(() => {
+        alert("음표를 누르면 bgm을 들을 수 있어요♡")
+    }, 3000);
+
     $(".contact_button").on("click", function(){
         $(".dim").css("display", "block");
         let popup_type = $(this).data("type");
