@@ -11,16 +11,28 @@ $(document).ready(function(){
         })
     })
     
-    if(window.innerWidth < 1100) {
-        $(window).scroll(function(){
-            let scrT = $(window).scrollTop();
-            if(scrT > 300) {
-                $(".only_m").css("display", "block");
-            } else {
-                $(".only_m").css("display", "none");
-            }
-        })
-    }
+    $(window).scroll(function(){
+        let scrT = $(window).scrollTop();
+        if(scrT > 200) {
+            $(".only_m").css("display", "block");
+        } else {
+            $(".only_m").css("display", "none");
+        }
+    })
+
+    let musicOnOff = false;
+    let musicButton = document.getElementById('musicOnOff');
+    musicButton.addEventListener("click", function(){
+        if(musicOnOff == false){
+            document.getElementById('play_music').play();
+            musicOnOff = true;
+            $('#music_button_img').attr("src","img/pause.png");
+        } else {
+            document.getElementById('play_music').pause();
+            musicOnOff = false;
+            $('#music_button_img').attr("src","img/icon_music.png");
+        }
+    })
 
     $(".contact_button").on("click", function(){
         $(".dim").css("display", "block");
