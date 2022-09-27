@@ -200,7 +200,7 @@ a {
 }
 
 .ww_gallery img {
-    width: 470px;
+    max-width: 470px;
     float: left;
     margin: 40px;
 }
@@ -237,6 +237,7 @@ a {
     top: 105px;
     background-color: #fff;
     padding: 20px;
+    width: -webkit-fill-available;
 }
 
 .contact_button_icon {
@@ -299,9 +300,6 @@ a {
         background-size: 600px;
         height: 400px;
     }
-    .preview.first, .main_container {
-        /* width: fit-content; */
-    }
     .preview_text {
         height: auto; 
         padding: 0;
@@ -309,12 +307,21 @@ a {
     .preview_text p {
         margin: 10px auto;
     }
-    /* .gallery_page {
-        background: url('img/gallery1.jpg') 50% 0% / auto no-repeat fixed rgba(0, 0, 0, 0); height: 600px;
+    .ww_gallery img {
+        width: 100%;
+        margin: 10px 0;
+    }
+    .gallery_page {
+        background: url('img/gallery1.jpg') 50% 0% / contain no-repeat rgba(0, 0, 0, 0);
+        background-size: 600px;
+        height: 400px;
     }
     .map_page {
-        background: url('img/map.jpg') 50% 0% / auto no-repeat fixed rgba(0, 0, 0, 0); height: 600px;
-    } */
+        background: url('img/map.jpg') 50% 0% / contain no-repeat rgba(0, 0, 0, 0);
+        /* background: url('img/map.jpg') 50% 0% / auto no-repeat fixed rgba(0, 0, 0, 0); height: 600px; */
+        background-size: 600px;
+        height: 400px;
+    }
     .ww_container .text_center {
         flex-wrap: wrap;
     }
