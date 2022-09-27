@@ -1,12 +1,16 @@
 "use strict"
 
 $(document).ready(function(){
+
     $(function(){
         $('.bank_txt').on('click', function(){
             var bank_txt = $('.bank_txt_com', this).text() + ' ' + $('.bank_txt_num', this).text()
             if (bank_txt.length > 1) {
                 clipboard_copy(bank_txt)
-                alert(bank_txt + ' 복사되었습니다')
+                $("#notification_copy").fadeIn();
+                setTimeout(() => {
+                    $("#notification_copy").fadeOut();
+                }, 2000)
             }
         })
     })
@@ -34,9 +38,12 @@ $(document).ready(function(){
         }
     })
 
-    setTimeout(() => {
-        alert("음표를 누르면 bgm을 들을 수 있어요♡")
-    }, 3000);
+    if ($(location).attr('pathname').split('/')[7] == 'gallery.html') {
+        $("#notification_music").fadeIn();
+        setTimeout(() => {
+            $("#notification_music").fadeOut();
+        }, 2000)
+    }
 
     $(".contact_button").on("click", function(){
         $(".dim").css("display", "block");
