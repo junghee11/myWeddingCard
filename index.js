@@ -38,7 +38,7 @@ $(document).ready(function(){
         }
     })
 
-    if ($(location).attr('pathname').split('/')[7] == 'gallery.html') {
+    if ($(location).attr('pathname').split('/')[2] == 'gallery.html') {
         $("#notification_music").fadeIn();
         setTimeout(() => {
             $("#notification_music").fadeOut();
