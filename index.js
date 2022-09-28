@@ -39,10 +39,12 @@ $(document).ready(function(){
     })
 
     if ($(location).attr('pathname').split('/')[2] == 'gallery.html') {
-        $("#notification_music").fadeIn();
+        setTimeout(() => {
+            $("#notification_music").fadeIn();
+        }, 2000)
         setTimeout(() => {
             $("#notification_music").fadeOut();
-        }, 2000)
+        }, 5000)
     }
 
     $(".contact_button").on("click", function(){
