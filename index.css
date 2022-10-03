@@ -103,6 +103,13 @@ a {
     background: url('img/map.jpg') 50% 0% / auto no-repeat fixed rgba(0, 0, 0, 0); height: 600px;
 }
 
+.message_page {
+    width: 100%;
+    z-index: -1;
+    padding: 20px 0px 0px; 
+    background: url('img/message.jpg') 50% 0% / auto no-repeat fixed rgba(0, 0, 0, 0); height: 600px;
+}
+
 .preview_text {
     height: 450px; 
     text-align: center; 
@@ -352,6 +359,11 @@ a {
     .map_page {
         background: url('img/map.jpg') 50% 0% / contain no-repeat rgba(0, 0, 0, 0);
         /* background: url('img/map.jpg') 50% 0% / auto no-repeat fixed rgba(0, 0, 0, 0); height: 600px; */
+        background-size: 600px;
+        height: 250px;
+    }
+    .message_page {
+        background: url('img/message.jpg') 50% 0% / contain no-repeat rgba(0, 0, 0, 0);
         background-size: 600px;
         height: 250px;
     }
