@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script language="javascript" type="text/javascript" src="index.js?ver=1.01"></script>
+    <link rel="stylesheet" href="./index.css">
+    <title>Document</title>
+</head>
+<body>
+<div class="preview map_page">
+    <div class="header only_pc">
+        <div style="width:55%">
+            <img src="img/logo.png" alt="" onclick="location.href='./index.html'">
+        </div>
+        <div style="width:45%">
+            <ul  class="nav_page">
+                <li> <a href="./index.html">HOME</a></li>
+                <li> <a href="./gallery.html">갤러리</a></li>
+                <li> <a href="./map.html">오시는길</a></li>
+                <li> <a href="./message.html">메세지</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="header only_m">
+        <ul class="nav_page">
+            <li> <a href="./index.html">HOME</a></li>
+            <li> <a href="./gallery.html">갤러리</a></li>
+            <li> <a href="./map.html">오시는길</a></li>
+            <li> <a href="./message.html">메세지</a></li>
+        </ul>
+    </div>
+</div>
+<div class="main_container">
+    <div class="section" style="text-align: left; padding: 0 20px;">
+        <h3>메세지를 전해주세요♥</h3>
+        <ol id="comment-list" class="layout">
+            <li>
+                <p>김모모  
+                <small>2022-10-04  14:54</small>
+                </p>
+                <p>테스트 문구입니다</p>
+            </li>
+        </ol>
+        <table style="width:100%;">
+            <tbody>
+                <tr>
+                    <td>
+                        <input id="nickname" type="text" placeholder="이름">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <textarea id="comment_input" type="text" placeholder="축하의 말을 남겨주세요!" rows="1" style="width:95%; height: 50px;"></textarea>
+                    </td>
+                    <td style="width:18%;">
+                        <button id="comment-registration" onClick="registerComment">등록</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<div class="footer">
+    <div class="section">
+        <div><img src="img/logo.png" alt=""></div>
+        <div>
+            <p style="letter-spacing: 8px;">MADE BY JUNGHEE</p>
+            <p><span style="color:#808080;">COPYRIGHT (C) NAM JUNGHEE. All Rights reserved</span></p>
+        </div>
+    </div>
+</div>
+<div class="fixed_icon music_button">
+    <i id="musicOnOff" style="width:50px; height: 50px; position: absolute;display: block;"></i>
+    <img id="music_button_img" src="img/icon_music.png" alt="">
+    <audio src="img/music.mp3" loop id="play_music">
+    </audio>
+</div>
+<div class="fixed_icon top_button">
+    <img src="img/top.png" alt="">
+</div>
+</body>
+</html>

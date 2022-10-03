@@ -1,4 +1,4 @@
-body, div, ul, li {
+body, div, ul, li, ol {
     margin: 0;
     padding: 0;
 }
@@ -73,6 +73,7 @@ a {
 }
 
 .only_m .nav_page li {
+    /* width: 25%; */
     width: 33.33%;
 }
 

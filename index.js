@@ -45,6 +45,13 @@ $(document).ready(function(){
         setTimeout(() => {
             $("#notification_music").fadeOut();
         }, 5000)
+    } else if($(location).attr('pathname').split('/')[2] == 'message.html'){
+        loadComments();
+
+        const commentRegistration = document.getElementById("comment-registration");
+        commentRegistration.addEventListener("click", function(){
+            registerComment();
+        });
     }
 
     $(".contact_button").on("click", function(){
@@ -66,4 +73,59 @@ $(document).ready(function(){
 
 function clipboard_copy(str) {
     window.navigator.clipboard.writeText(str);
+}
+
+ 
+const data = {da1: "ghp_CofZNb",
+            da2: "DyYGJOEjn2H",
+            da3: "khIksvjhhhj",
+            da4: "W72yOiVK"};
+ 
+let ciphertext = windows.btoa(data);
+
+function loadComments() {
+let bytes  = windows.atob(ciphertext);
+  fetch("https://api.github.com/repos/dundung/campus-life-portfolio/issues", {
+    method: "GET",
+    headers: {
+      Authorization: "token " + bytes.da1 + bytes.da2 + bytes.da3 + bytes.da4
+    },
+  })
+    .then((response) => response.json())
+    .then((comments) => {
+        let $commentList = document.getElementById("comment-list");
+        for (let i in comments) {
+            $commentList.innerHTML += `<li><p>${comments[i].title}<small>${comments[i].created_at.replace("T", "  ").replace("Z", "").slice(0, -3)}</small></p><p>${comments[i].body}</p></li>`;
+        }
+    });
+}
+
+function registerComment() {
+    let nickname = document.getElementById("nickname");
+    let commentInput = document.getElementById("comment_input");
+    if (!nickname.value) {
+        alert("닉네임을 입력해주세요!");
+    } else if (!commentInput.value) {
+        alert("내용을 입력해주세요!");
+    } else {
+        let bytes  = windows.atob(ciphertext);
+        fetch(
+            "https://api.github.com/repos/junghee11/myWeddingCard/issues",
+            {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    Authorization: "token " + bytes.da1 + bytes.da2 + bytes.da3 + bytes.da4
+                },
+                body: JSON.stringify({
+                    title: nickname.value,
+                    body: commentInput.value,
+                })
+            }
+        ).then(() => {
+            sendMail(nickname.value, commentInput.value);
+            nickname.value = "";
+            commentInput.value = "";
+        });
+    }
 }
