@@ -128,19 +128,20 @@ function registerComment() {
                 })
             }
         ).then(() => {
-            sendMail(nickname.value, commentInput.value);
+            // sendMail(nickname.value, commentInput.value);
             nickname.value = "";
             commentInput.value = "";
+            window.location.reload();
         });
     }
 }
 
-function sendMail(nickname, comment) {
-    let templateParams = {
-      nickname: nickname,
-      comment: comment,
-    };
-    emailjs
-      .send("service_2syktss", "template_4nk0rnw", templateParams)
-      .then(() => window.location.reload());
-  }
+// function sendMail(nickname, comment) {
+//     let templateParams = {
+//       nickname: nickname,
+//       comment: comment,
+//     };
+//     emailjs
+//       .send("service_2syktss", "template_4nk0rnw", templateParams)
+//       .then(() => window.location.reload());
+//   }
