@@ -100,11 +100,9 @@ let bytes  = atob(cip)+atob(her)+atob(text);
         let commentList = document.getElementById("comment-list");
         commentList.innerHTML = "";
         for (let i in comments) {
-            commentList.innerHTML += `<li><p>${comments[i].title}<small>${comments[i].created_at.replace("T", "  ").replace("Z", "").slice(0, -3)}</small></p><p>${comments[i].body}</p></li>`;
-            let tmp = comments[i].created_at;
-            console.log(tmp.replace("T", "  ").replace("Z", "").slice(0, -3)+2);
-            tmp = tmp +2;
-            console.log(tmp.replace("T", "  ").replace("Z", "").slice(0, -3));
+            let date = new Date(comments[i].created_at.replace("T", " ").replace("Z", "").slice(0, -3));
+            date.setHours(date.getHours() + 9);
+            commentList.innerHTML += `<li><p>${comments[i].title}<small>${date.toLocaleString()}</small></p><p>${comments[i].body}</p></li>`;
         }
     });
 }
