@@ -81,10 +81,10 @@ const data = {da1: "ghp_CofZNb",
             da3: "khIksvjhhhj",
             da4: "W72yOiVK"};
  
-let ciphertext = windows.btoa(data);
+let ciphertext = window.btoa(data);
 
 function loadComments() {
-let bytes  = windows.atob(ciphertext);
+let bytes  = window.atob(ciphertext);
   fetch("https://api.github.com/repos/dundung/campus-life-portfolio/issues", {
     method: "GET",
     headers: {
@@ -108,7 +108,7 @@ function registerComment() {
     } else if (!commentInput.value) {
         alert("내용을 입력해주세요!");
     } else {
-        let bytes  = windows.atob(ciphertext);
+        let bytes  = window.atob(ciphertext);
         fetch(
             "https://api.github.com/repos/junghee11/myWeddingCard/issues",
             {
