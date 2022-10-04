@@ -331,6 +331,28 @@ a {
     z-index: 9;
 }
 
+#nickname {
+    width: 60px;
+}
+
+#comment_input {
+    width:100%; 
+    height: 24px;
+    line-height: 23px;
+}
+
+#comment-registration {
+    width: 50px;
+    background-color: dimgray;
+    color: white;
+    border: none;
+    height: 28px;
+    font-weight: 700;
+    border-radius: 3px;
+    position: absolute;
+    right: 5%;
+}
+
 @media screen and (max-width: 1100px) {
     .only_pc {
         display: none;

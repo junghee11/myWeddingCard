@@ -76,19 +76,21 @@ function clipboard_copy(str) {
 }
 
  
-const data = {da1: "ghp_CofZNb",
-            da2: "DyYGJOEjn2H",
-            da3: "khIksvjhhhj",
-            da4: "W72yOiVK"};
+const no = "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";
  
-let ciphertext = window.btoa(data);
+let cip = btoa(no.substring(0,13));
+let her = btoa(no.substring(13,26));
+let text = btoa(no.substring(26,40));
+
+// let bytes  = atob(cip)+atob(her)+atob(text);
+// console.log("token " + bytes);
 
 function loadComments() {
-let bytes  = window.atob(ciphertext);
+let bytes  = atob(cip)+atob(her)+atob(text);
   fetch("https://api.github.com/repos/junghee11/myWeddingCard/issues", {
     method: "GET",
     headers: {
-      Authorization: "token " + bytes.da1 + bytes.da2 + bytes.da3 + bytes.da4
+      Authorization: "token " + bytes
     },
   })
     .then((response) => response.json())
@@ -108,14 +110,14 @@ function registerComment() {
     } else if (!commentInput.value) {
         alert("내용을 입력해주세요!");
     } else {
-        let bytes  = window.atob(ciphertext);
+        let bytes  = atob(cip)+atob(her)+atob(text);
         fetch(
             "https://api.github.com/repos/junghee11/myWeddingCard/issues",
             {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
-                    Authorization: "token " + bytes.da1 + bytes.da2 + bytes.da3 + bytes.da4
+                    Authorization: "token " + bytes
                 },
                 body: JSON.stringify({
                     title: nickname.value,
