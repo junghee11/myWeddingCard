@@ -331,6 +331,10 @@ a {
     z-index: 9;
 }
 
+#comment-list li small {
+    margin-left: 10px;
+}
+
 #nickname {
     width: 60px;
 }
