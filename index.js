@@ -99,8 +99,8 @@ let bytes  = atob(cip)+atob(her)+atob(text);
     .then((comments) => {
         let $commentList = document.getElementById("comment-list");
         for (let i in comments) {
-            // $commentList.innerHTML += `<li><p>${comments[i].title}<small>${comments[i].created_at.replace("T", "  ").replace("Z", "").slice(0, -3)}</small></p><p>${comments[i].body}</p></li>`;
-            $commentList.innerHTML += `<li><p>${comments[i].title}<small></small></p><p>${comments[i].body}</p></li>`;
+            $commentList.innerHTML += `<li><p>${comments[i].title}<small>${comments[i].created_at.replace("T", "  ").replace("Z", "").slice(0, -3)}</small></p><p>${comments[i].body}</p></li>`;
+            // $commentList.innerHTML += `<li><p>${comments[i].title}<small></small></p><p>${comments[i].body}</p></li>`;
         }
     });
 }

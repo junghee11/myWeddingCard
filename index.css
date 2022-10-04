@@ -73,8 +73,8 @@ a {
 }
 
 .only_m .nav_page li {
-    /* width: 25%; */
-    width: 33.33%;
+    width: 25%;
+    /* width: 33.33%; */
 }
 
 .only_m .nav_page li a {
