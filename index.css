@@ -351,6 +351,7 @@ a {
     border-radius: 3px;
     position: absolute;
     right: 5%;
+    cursor: pointer;
 }
 
 @media screen and (max-width: 1100px) {

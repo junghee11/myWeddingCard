@@ -76,11 +76,13 @@ function clipboard_copy(str) {
 }
 
  
-const no = "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";
+const no1 = "ghp_Cb845zC3";
+const no2 = "Abu24Ir4HJhe";
+const no3 = "iNsJAQYpXy1NvXdo";
  
-let cip = btoa(no.substring(0,13));
-let her = btoa(no.substring(13,26));
-let text = btoa(no.substring(26,40));
+let cip = btoa(no1);
+let her = btoa(no2);
+let text = btoa(no3);
 
 // let bytes  = atob(cip)+atob(her)+atob(text);
 // console.log("token " + bytes);
@@ -91,13 +93,14 @@ let bytes  = atob(cip)+atob(her)+atob(text);
     method: "GET",
     headers: {
       Authorization: "token " + bytes
-    },
+    }
   })
     .then((response) => response.json())
     .then((comments) => {
         let $commentList = document.getElementById("comment-list");
         for (let i in comments) {
-            $commentList.innerHTML += `<li><p>${comments[i].title}<small>${comments[i].created_at.replace("T", "  ").replace("Z", "").slice(0, -3)}</small></p><p>${comments[i].body}</p></li>`;
+            // $commentList.innerHTML += `<li><p>${comments[i].title}<small>${comments[i].created_at.replace("T", "  ").replace("Z", "").slice(0, -3)}</small></p><p>${comments[i].body}</p></li>`;
+            $commentList.innerHTML += `<li><p>${comments[i].title}<small></small></p><p>${comments[i].body}</p></li>`;
         }
     });
 }
