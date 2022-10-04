@@ -131,3 +131,13 @@ function registerComment() {
         });
     }
 }
+
+function sendMail(nickname, comment) {
+    let templateParams = {
+      nickname: nickname,
+      comment: comment,
+    };
+    emailjs
+      .send("service_2syktss", "template_4nk0rnw", templateParams)
+      .then(() => window.location.reload());
+  }
