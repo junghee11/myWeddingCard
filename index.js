@@ -97,10 +97,10 @@ let bytes  = atob(cip)+atob(her)+atob(text);
   })
     .then((response) => response.json())
     .then((comments) => {
-        let $commentList = document.getElementById("comment-list");
+        let commentList = document.getElementById("comment-list");
+        commentList.innerHTML = "";
         for (let i in comments) {
-            $commentList.innerHTML += `<li><p>${comments[i].title}<small>${comments[i].created_at.replace("T", "  ").replace("Z", "").slice(0, -3)}</small></p><p>${comments[i].body}</p></li>`;
-            // $commentList.innerHTML += `<li><p>${comments[i].title}<small></small></p><p>${comments[i].body}</p></li>`;
+            commentList.innerHTML += `<li><p>${comments[i].title}<small>${comments[i].created_at.replace("T", "  ").replace("Z", "").slice(0, -3)}</small></p><p>${comments[i].body}</p></li>`;
             let tmp = comments[i].created_at;
             console.log(tmp.replace("T", "  ").replace("Z", "").slice(0, -3)+2);
             tmp = tmp +2;
@@ -132,10 +132,9 @@ function registerComment() {
                 })
             }
         ).then(() => {
-            // sendMail(nickname.value, commentInput.value);
             nickname.value = "";
             commentInput.value = "";
-            window.location.reload();
+            loadComments();
         });
     }
 }
