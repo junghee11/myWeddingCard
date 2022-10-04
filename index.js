@@ -85,7 +85,7 @@ let ciphertext = window.btoa(data);
 
 function loadComments() {
 let bytes  = window.atob(ciphertext);
-  fetch("https://api.github.com/repos/dundung/campus-life-portfolio/issues", {
+  fetch("https://api.github.com/repos/junghee11/myWeddingCard/issues", {
     method: "GET",
     headers: {
       Authorization: "token " + bytes.da1 + bytes.da2 + bytes.da3 + bytes.da4
