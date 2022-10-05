@@ -107,7 +107,6 @@ let bytes  = atob(cip)+atob(her)+atob(text);
   })
     .then((response) => response.json())
     .then((comments) => {
-        console.log(check);
         let commentList = document.getElementById("comment-list");
         commentList.innerHTML = "";
         let date = "";
@@ -118,14 +117,13 @@ let bytes  = atob(cip)+atob(her)+atob(text);
             // commentList.innerHTML += `<li><p>${comments[i].title}<small>${comments[i].created_at.replace("T", " ").replace("Z", "").slice(0, -9)}</small></p><p>${comments[i].body}</p></li>`;
         }
         check = true;
-        console.log(check);
     });
 }
 
 function registerComment() {
     let nickname = document.getElementById("nickname");
     let commentInput = document.getElementById("comment_input");
-    check = false;
+    check = !check;
     if (!nickname.value) {
         alert("닉네임을 입력해주세요!");
     } else if (!commentInput.value) {
@@ -149,9 +147,7 @@ function registerComment() {
             alert("댓글이 등록되었습니다♡");
             nickname.value = "";
             commentInput.value = "";
-            console.log(check);
             loadComments();
-            console.log(check);
         });
     }
 }
