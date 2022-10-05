@@ -1,8 +1,7 @@
 "use strict"
-
 $(document).ready(function(){
 
-    let clickCheck = true;
+    var check = true;
 
     $(function(){
         $('.bank_txt').on('click', function(){
@@ -18,7 +17,7 @@ $(document).ready(function(){
     })
     
     $(window).scroll(function(){
-        let scrT = $(window).scrollTop();
+        var scrT = $(window).scrollTop();
         if(scrT > 200) {
             $(".only_m").css("display", "block");
         } else {
@@ -47,12 +46,23 @@ $(document).ready(function(){
         setTimeout(() => {
             $("#notification_music").fadeOut();
         }, 5000)
+
+        $(window).scroll(function(){
+            var scrT = $(window).scrollTop();
+            if(scrT > 9200 && check) {
+                $("#notification_picture").fadeIn();
+                setTimeout(() => {
+                    $("#notification_picture").fadeOut();
+                }, 3500)
+                check = !check;
+            } 
+        })
     } else if($(location).attr('pathname').split('/')[2] == 'message.html'){
         loadComments();
 
         const commentRegistration = document.getElementById("comment-registration");
         commentRegistration.addEventListener("click", function(){
-            if(clickCheck){
+            if(check){
                 registerComment();
             } 
         });
@@ -98,6 +108,7 @@ let bytes  = atob(cip)+atob(her)+atob(text);
   })
     .then((response) => response.json())
     .then((comments) => {
+        console.log(check);
         let commentList = document.getElementById("comment-list");
         commentList.innerHTML = "";
         let date = "";
@@ -107,14 +118,15 @@ let bytes  = atob(cip)+atob(her)+atob(text);
             commentList.innerHTML += `<li><p>${comments[i].title}<small>${date.toLocaleDateString()}</small></p><p>${comments[i].body}</p></li>`;
             // commentList.innerHTML += `<li><p>${comments[i].title}<small>${comments[i].created_at.replace("T", " ").replace("Z", "").slice(0, -9)}</small></p><p>${comments[i].body}</p></li>`;
         }
-        clickCheck = true;
+        check = true;
+        console.log(check);
     });
 }
 
 function registerComment() {
     let nickname = document.getElementById("nickname");
     let commentInput = document.getElementById("comment_input");
-    clickCheck = false;
+    check = false;
     if (!nickname.value) {
         alert("닉네임을 입력해주세요!");
     } else if (!commentInput.value) {
