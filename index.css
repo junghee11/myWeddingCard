@@ -339,8 +339,17 @@ a {
     z-index: 9;
 }
 
+#comment-list li {
+    border-bottom: 1px solid gray;
+}
+
+#comment-list li p.nick {
+    font-weight: 600;
+}
+
 #comment-list li small {
     margin-left: 10px;
+    font-weight: 400;
 }
 
 #nickname {
