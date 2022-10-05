@@ -1,7 +1,6 @@
 "use strict"
+var check = true;
 $(document).ready(function(){
-
-    var check = true;
 
     $(function(){
         $('.bank_txt').on('click', function(){
