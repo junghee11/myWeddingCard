@@ -2,6 +2,8 @@
 
 $(document).ready(function(){
 
+    let clickCheck = true;
+
     $(function(){
         $('.bank_txt').on('click', function(){
             var bank_txt = $('.bank_txt_com', this).text() + ' ' + $('.bank_txt_num', this).text()
@@ -50,7 +52,9 @@ $(document).ready(function(){
 
         const commentRegistration = document.getElementById("comment-registration");
         commentRegistration.addEventListener("click", function(){
-            registerComment();
+            if(clickCheck){
+                registerComment();
+            } 
         });
     }
 
@@ -84,9 +88,6 @@ let cip = btoa(no1);
 let her = btoa(no2);
 let text = btoa(no3);
 
-// let bytes  = atob(cip)+atob(her)+atob(text);
-// console.log("token " + bytes);
-
 function loadComments() {
 let bytes  = atob(cip)+atob(her)+atob(text);
   fetch("https://api.github.com/repos/junghee11/myWeddingCard/issues", {
@@ -99,17 +100,21 @@ let bytes  = atob(cip)+atob(her)+atob(text);
     .then((comments) => {
         let commentList = document.getElementById("comment-list");
         commentList.innerHTML = "";
+        let date = "";
         for (let i in comments) {
-            let date = new Date(comments[i].created_at.replace("T", " ").replace("Z", "").slice(0, -3));
+            date = new Date(comments[i].created_at.replace("T", " ").replace("Z", "").slice(0, -3));
             date.setHours(date.getHours() + 9);
-            commentList.innerHTML += `<li><p>${comments[i].title}<small>${date.toLocaleString()}</small></p><p>${comments[i].body}</p></li>`;
+            commentList.innerHTML += `<li><p>${comments[i].title}<small>${date.toLocaleDateString()}</small></p><p>${comments[i].body}</p></li>`;
+            // commentList.innerHTML += `<li><p>${comments[i].title}<small>${comments[i].created_at.replace("T", " ").replace("Z", "").slice(0, -9)}</small></p><p>${comments[i].body}</p></li>`;
         }
+        clickCheck = true;
     });
 }
 
 function registerComment() {
     let nickname = document.getElementById("nickname");
     let commentInput = document.getElementById("comment_input");
+    clickCheck = false;
     if (!nickname.value) {
         alert("닉네임을 입력해주세요!");
     } else if (!commentInput.value) {
@@ -130,6 +135,7 @@ function registerComment() {
                 })
             }
         ).then(() => {
+            alert("댓글이 등록되었습니다♡");
             nickname.value = "";
             commentInput.value = "";
             loadComments();
