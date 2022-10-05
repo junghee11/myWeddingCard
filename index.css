@@ -340,7 +340,7 @@ a {
 }
 
 #comment-list li {
-    border-bottom: 1px solid gray;
+    border-bottom: 1px solid lightgray;
 }
 
 #comment-list li p.nick {

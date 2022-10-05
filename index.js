@@ -113,7 +113,7 @@ let bytes  = atob(cip)+atob(her)+atob(text);
         for (let i in comments) {
             date = new Date(comments[i].created_at.replace("T", " ").replace("Z", "").slice(0, -3));
             date.setHours(date.getHours() + 9);
-            commentList.innerHTML += `<li><p>${comments[i].title}<small>${date.toLocaleDateString()}</small></p><p>${comments[i].body}</p></li>`;
+            commentList.innerHTML += `<li><p class='nick'>${comments[i].title}<small>${date.toLocaleDateString()}</small></p><p>${comments[i].body}</p></li>`;
             // commentList.innerHTML += `<li><p>${comments[i].title}<small>${comments[i].created_at.replace("T", " ").replace("Z", "").slice(0, -9)}</small></p><p>${comments[i].body}</p></li>`;
         }
         check = true;
