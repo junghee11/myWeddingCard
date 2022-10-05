@@ -149,7 +149,9 @@ function registerComment() {
             alert("댓글이 등록되었습니다♡");
             nickname.value = "";
             commentInput.value = "";
+            console.log(check);
             loadComments();
+            console.log(check);
         });
     }
 }
