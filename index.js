@@ -17,7 +17,7 @@ $(document).ready(function(){
     
     $(window).scroll(function(){
         var scrT = $(window).scrollTop();
-        if(scrT > 200) {
+        if(scrT > 180) {
             $(".only_m").css("display", "block");
         } else {
             $(".only_m").css("display", "none");
@@ -48,7 +48,7 @@ $(document).ready(function(){
 
         $(window).scroll(function(){
             var scrT = $(window).scrollTop();
-            if(scrT > 9200 && check) {
+            if(scrT > 8900 && check) {
                 $("#notification_picture").fadeIn();
                 setTimeout(() => {
                     $("#notification_picture").fadeOut();

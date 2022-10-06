@@ -59,10 +59,13 @@ a {
 
 .only_pc .nav_page.gray a {
     filter : invert(100%);
+    text-shadow: 0px 0px 2px #ffffff;
 }
 
 .only_pc .nav_page.dark a {
-    mix-blend-mode: difference;
+    filter : invert(100%);
+    text-shadow: 0px 0px 2px #a1a1a1;
+    /* mix-blend-mode: difference; */
 }
 
 .only_m {
