@@ -4,7 +4,7 @@ $(document).ready(function(){
 
     $(function(){
         $('.bank_txt').on('click', function(){
-            var bank_txt = $('.bank_txt_com', this).text() + ' ' + $('.bank_txt_num', this).text()
+            var bank_txt = $('.bank_txt_num', this).text()
             if (bank_txt.length > 1) {
                 clipboard_copy(bank_txt)
                 $("#notification_copy").fadeIn();
