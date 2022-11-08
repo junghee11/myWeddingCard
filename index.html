@@ -6,8 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- <script src="http://code.jquery.com/jquery-latest.min.js"></script> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script type="text/javascript" src="./clipboard.min.js"></script> 
-    <script language="javascript" type="text/javascript" src="index.js?ver=1.01"></script>
+    <!-- <script type="text/javascript" src="./clipboard.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/clipboard.js/1.5.3/clipboard.min.js"></script>
+    <script language="javascript" type="text/javascript" src="index.js?ver=1.02"></script>
     <link rel="stylesheet" href="./index.css">
     <title>김경한♥남정희</title>
 </head>
@@ -289,9 +290,11 @@
         <tbody>
             <tr>
                 <td>부) 김대기</td>
+                <!-- <td class="bank_txt" data-clipboard-target="#bank_txt1"> -->
                 <td class="bank_txt" data-clipboard-text="437-050388-01-014">
                     <div class="bank_txt_com">기업은행</div>
                     <div class="bank_txt_num">437-050388-01-014</div>
+                    <input type="hidden" id="bank_txt1">
                 </td>
             </tr>
         </tbody>
@@ -304,9 +307,11 @@
         <tbody>
             <tr>
                 <td>신랑 김경한</td>
+                <!-- <td class="bank_txt" data-clipboard-target="#bank_txt2"> -->
                 <td class="bank_txt" data-clipboard-text="579-020930-01-018">
                     <div class="bank_txt_com">기업은행</div>
                     <div class="bank_txt_num">579-020930-01-018</div>
+                    <input type="hidden" id="bank_txt2">
                 </td>
             </tr>
         </tbody>
@@ -325,9 +330,11 @@
         <tbody>
             <tr>
                 <td>모) 오수경</td>
+                <!-- <td class="bank_txt" data-clipboard-target="#bank_txt3"> -->
                 <td class="bank_txt" data-clipboard-text="150075-56-161429">
                     <div class="bank_txt_com">농협</div>
                     <div class="bank_txt_num">150075-56-161429</div>
+                    <input type="hidden" id="bank_txt3">
                 </td>
             </tr>
         </tbody>
@@ -340,9 +347,11 @@
         <tbody>
             <tr>
                 <td>신부 남정희</td>
+                <!-- <td class="bank_txt" data-clipboard-target="#bank_txt4"> -->
                 <td class="bank_txt" data-clipboard-text="3333-10-0533474">
                     <div class="bank_txt_com">카카오뱅크</div>
                     <div class="bank_txt_num">3333-10-0533474</div>
+                    <input type="hidden" id="bank_txt4">
                 </td>
             </tr>
         </tbody>
@@ -351,7 +360,7 @@
 </div>
 <div class="dim"></div>
 <div class="fixed_icon music_button">
-    <i id="musicOnOff" style="width:50px; height: 50px; position: absolute;display: block;"></i>
+    <i id="musicOnOff" style="width:50px; height: 50px; position: absolute; display: block;"></i>
     <img id="music_button_img" src="img/icon_music.png" alt="">
     <audio src="img/music.mp3" loop id="play_music">
     </audio>

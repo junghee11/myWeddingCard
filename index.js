@@ -5,14 +5,17 @@ $(document).ready(function(){
     $(function(){
         $('.bank_txt').on('click', function(){
             // var bank_txt = $('.bank_txt_num', this).text()
-            var bank_txt = $('.bank_txt_num', this)
-            if (bank_txt.length > 1) {
-                clipboard_copy(bank_txt)
-                // $("#notification_copy").fadeIn();
-                // setTimeout(() => {
-                //     $("#notification_copy").fadeOut();
-                // }, 2000)
-            }
+            // var bank_txt = $('#bank_txt2');
+            // var bank_txt = document.getElementById("bank_txt2");
+            var bank_txt = this;
+            // var bank_txt = $('#bank_txt4').text()
+            clipboard_copy(bank_txt);
+            // if (bank_txt.length > 1) {
+            //     $("#notification_copy").fadeIn();
+            //     setTimeout(() => {
+            //         $("#notification_copy").fadeOut();
+            //     }, 2000)
+            // }
         })
     })
     
@@ -87,14 +90,14 @@ $(document).ready(function(){
 
 function clipboard_copy(str) {
     // window.navigator.clipboard.writeText(str);
-    var clipboard = new Clipboard(str);
+    let clipboard = new Clipboard(str);
     clipboard.on('success', function(e){
         $("#notification_copy").fadeIn();
         setTimeout(() => {
             $("#notification_copy").fadeOut();
         }, 2000)
     })
-    clipboard.error('success', function(e){
+    clipboard.on('error', function(e){
        alert("복사실패하였습니다.")
     })
 }
