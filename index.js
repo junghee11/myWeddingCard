@@ -7,9 +7,9 @@ $(document).ready(function(){
             // var bank_txt = $('.bank_txt_num', this).text()
             // var bank_txt = $('#bank_txt2');
             // var bank_txt = document.getElementById("bank_txt2");
-            var bank_txt = this;
+            let bank_number = this;
             // var bank_txt = $('#bank_txt4').text()
-            clipboard_copy(bank_txt);
+            clipboard_copy(bank_number);
             // if (bank_txt.length > 1) {
             //     $("#notification_copy").fadeIn();
             //     setTimeout(() => {
